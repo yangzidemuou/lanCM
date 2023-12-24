@@ -41,6 +41,7 @@ public:
         for (int carry = 0; i >= 0 || j >= 0 || carry; --i, --j) {
             carry += (i >= 0 ? a[i] - '0' : 0) + (j >= 0 ? b[j] - '0' : 0);
             ans.push_back((carry % 2) + '0');
+            cout<<ans<<endl;
             carry /= 2;
         }
         reverse(ans.begin(), ans.end());
@@ -49,11 +50,7 @@ public:
 };
 
 int main(){
-
     Solution solution;
-    cout<<solution.addBinary("11","10")<<endl;
-    cout<<solution.addBinary("1010","1011")<<endl;
-
-
+    cout<<solution.addBinary("111","11")<<endl;
     return 0;
 }
